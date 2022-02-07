@@ -73,7 +73,8 @@ Functions from the Pandas and NumPy libraries such as value_counts() are used to
 ## EDA with SQL
 <a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/4_EDA%20with%20SQL.ipynb" target="_blank">4_EDA with SQL.ipynb</a>
 
-Framework: IBM DB2
+Framework used: IBM DB2
+
 Libraries or modules used: ibm_db
 
 The data is queried using SQL to answer several questions about the data such as:
@@ -83,4 +84,107 @@ The data is queried using SQL to answer several questions about the data such as
 
 The SQL statements or functions used include SELECT, DISTINCT, AS, FROM, WHERE, LIMIT, LIKE, SUM(), AVG(), MIN(), BETWEEN, COUNT(), and YEAR().
 
-##
+## Data Visualization using Matplotlib and Seaborn
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/5_EDA%20Visualization.ipynb" target="_blank">5_EDA Visualization.ipynb</a>
+
+Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn
+
+Functions from the Matplotlib and Seaborn libraries are used to visualize the data through scatterplots, bar charts, and line charts. The plots and charts are used to understand more about the relationships between several features, such as:
+- The relationship between flight number and launch site
+- The relationship between payload mass and launch site
+- The relationship between success rate and orbit type
+
+Examples of functions from seaborn that are used here are scatterplot(), barplot(), catplot(), and lineplot().
+
+<br>
+Example: A scatterplot showing the relationship between flight number and launch site
+<p align="center">
+<img width="604" alt="Picture 1" src="https://user-images.githubusercontent.com/46462603/152728660-a3b5dc76-2e52-4c66-b058-3e37361b7055.png">
+</p>
+<br>
+
+## Data Visualization using Folium
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/6_Interactive%20Visual%20Analytics%20with%20Folium%20lab.ipynb" target="_blank">6_Interactive Visual Analytics with Folium lab.ipynb</a>
+
+Libraries or modules used: folium, wget, pandas, math
+
+Functions from the Folium libraries are used to visualize the data through interactive maps. The Folium library is used to:
+- Mark all launch sites on a map
+- Mark the succeeded launches and failed launches for each site on the map
+- Mark the distances between a launch site to its proximities such as the nearest city, railway, or highway
+
+These are done using functions from folium such as add_child() and folium plugins which include MarkerCluster, MousePosition, and DivIcon.
+
+<br>
+Example: A folium map showing the succeeded launches and failed launches for a specific launch site. If we zoom in on one of the launch site, we can see green and red tags. Each green tag represents a successful launch while each red tag represents a failed launch.
+<p align="center">
+<img width="670" alt="Picture 2" src="https://user-images.githubusercontent.com/46462603/152728830-e7a4d921-706e-4040-af27-b4b27361f8c1.png">
+</p>
+<br>
+
+## Data Visualization using Dash
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/7_spacex_dash_app.py" target="_blank">7_spacex_dash_app.py</a>
+
+Libraries or modules used: pandas, dash, dash_html_components, dash_core_components, Input and Output from dash.dependencies, plotly.express
+
+Functions from Dash are used to generate an interactive site where we can toggle the input using a dropdown menu and a range slider.
+Using a pie chart and a scatterplot, the interactive site shows:
+- The total success launches from each launch site
+- The correlation between payload mass and mission outcome (success or failure) for each launch site
+
+The application is launched on a terminal on the IBM Cognitive Class website.
+
+<br>
+The picture below shows a pie chart when launch site CCAFS LC-40 is chosen in the dropdown menu on the website. 0 represents failed launches while 1 represents successful launches. We can see that 73.1% of launches done at CCAFS LC-40 are failed launches.
+<p align="center">
+<img width="692" alt="Picture 3" src="https://user-images.githubusercontent.com/46462603/152729002-f731499b-aab8-46a1-b1c3-583c24ae909e.png">
+</p>
+<br>
+<br>
+The picture below shows a scatterplot when the payload mass range is set to be from 2000kg to 8000kg. Class 0 represents failed launches while class 1 represents successful launches. 
+<p align="center">
+<img width="748" alt="Picture 4" src="https://user-images.githubusercontent.com/46462603/152729009-c2cdaba4-674c-4103-b540-e77ad3544a99.png">
+</p>
+<br>
+
+## Machine Learning Prediction
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/8_Machine%20Learning%20Prediction.ipynb" target="_blank">8_Machine Learning Prediction.ipynb</a>
+
+Libraries or modules used: pandas, numpy, matplotlib.pyplot, seaborn, sklearn
+
+Functions from the Scikit-learn library are used to create our machine learning models. The machine learning prediction phase include the following steps:
+1. Standardizing the data using the preprocessing.StandardScaler() function from sklearn
+2. Splitting the data into training and test data using the train_test_split function from sklearn.model_selection
+3. Creating machine learning models, which include:
+  - Logistic regression using LogisticRegression from sklearn.linear_model
+  - Support vector machine (SVM) using SVC from sklearn.svm
+  - Decision tree using DecisionTreeClassifier from sklearn.tree
+  - K nearest neighbors (KNN) using KNeighborsClassifier from sklearn.neighbors
+4. Fit the models on the training set 
+5. Find the best combination of hyperparameters for each model using GridSearchCV from sklearn.model_selection
+6. Evaluate the models based on their accuracy scores and confusion matrix using the score() function and confusion_matrix from sklearn.metrics
+
+Putting the results of all 4 models side by side, we can see that they all share the same accuracy score and confusion matrix when tested on the test set. Therefore, their GridSearchCV best scores are used to rank them instead. Based on the GridSearchCV best scores, the models are ranked in the following order with the first being the best and the last one being the worst:
+- Decision tree (GridSearchCV best score: 0.8892857142857142) 
+- K nearest neighbors, KNN (GridSearchCV best score: 0.8482142857142858)
+- Support vector machine, SVM (GridSearchCV best score: 0.8482142857142856)
+- Logistic regression (GridSearchCV best score: 0.8464285714285713)
+
+<br>
+The picture below shows the confusion matrix when the Decision Tree model is tested on the test data.
+<p align="center">
+<img width="368" alt="Picture 5" src="https://user-images.githubusercontent.com/46462603/152729182-f031ab89-9805-4701-a112-3baad406e127.png">
+</p>
+<br>
+
+## Discussion
+From the data visualization section, we can see that some features may have correlation with the mission outcome in several ways. For example, with heavy payloads the successful landing or positive landing rate are more for orbit types Polar, LEO and ISS. However, for GTO, we cannot distinguish this well as both positive landing rate and negative landing(unsuccessful mission) are both there here.
+
+Therefore, each feature may have a certain impact on the final mission outcome. The exact ways of how each of these features impact the mission outcome are difficult to decipher. However, we can use some machine learning algorithms to learn the pattern of the past data and predict whether a mission will be successful or not based on the given features.
+
+## Conclusion
+In this project, we try to predict if the first stage of a given Falcon 9 launch will land in order to determine the cost of a launch. Each feature of a Falcon 9 launch, such as its payload mass or orbit type, may affect the mission outcome in a certain way. 
+
+Several machine learning algorithms are employed to learn the patterns of past Falcon 9 launch data to produce predictive models that can be used to predict the outcome of a Falcon 9 launch. The predictive model produced by decision tree algorithm performed the best among the 4 machine learning algorithms employed. 
+
+~ Project created in January 2022 ~
