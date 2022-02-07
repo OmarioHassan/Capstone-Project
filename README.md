@@ -1,6 +1,6 @@
 # IBM Applied Data Science Capstone Project
 
-The PowerPoint slides for this project can be found at <a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/Capstone_Presentation.pptx" target="_blank">Capstone_Presentation.pptx</a>.
+The PowerPoint slides for this project can be found at <a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/Capstone_Presentation.pptx" target="_blank">Capstone_Presentation.pptx</a> or <a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/Capstone_Presentation.pdf" target="_blank">Capstone_Presentation.pdf</a>.
 
 ## Executive summary
 In this capstone project, we will predict if the SpaceX Falcon 9 first stage will land successfully using several machine learning classification algorithms.
@@ -37,7 +37,7 @@ The overall methodology includes:
   - K-nearest neighbors (KNN)
 
 ## Data collection using SpaceX API
-<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone/blob/main/1_Data%20Collection%20API.ipynb" target="_blank">1_Data Collection API.ipynb</a>
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/1_Data%20Collection%20API.ipynb" target="_blank">1_Data Collection API.ipynb</a>
 
 Libraries or modules used: requests, pandas, numpy, datetime
 
@@ -49,7 +49,7 @@ Libraries or modules used: requests, pandas, numpy, datetime
 - We end up with 90 rows or instances and 17 columns or features. 
 
 ## Data Collection with Web Scraping
-<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone/blob/main/2_Data%20Collection%20with%20Web%20Scraping.ipynb" target="_blank">2_Data Collection with Web Scraping.ipynb</a>
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/2_Data%20Collection%20with%20Web%20Scraping.ipynb" target="_blank">2_Data Collection with Web Scraping.ipynb</a>
 
 Libraries or modules used: sys, requests, BeautifulSoup from bs4, re, unicodedata, pandas
 
@@ -61,7 +61,7 @@ Libraries or modules used: sys, requests, BeautifulSoup from bs4, re, unicodedat
 - We end up with 121 rows or instances and 11 columns or features. 
 
 ## EDA with Pandas and Numpy
-<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone/blob/main/3_EDA.ipynb" target="_blank">3_EDA.ipynb</a>
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/3_EDA.ipynb">3_EDA.ipynb</a>
 
 Libraries or modules used: pandas, numpy
 
@@ -71,7 +71,7 @@ Functions from the Pandas and NumPy libraries such as value_counts() are used to
 - The number and occurrence of each mission outcome
 
 ## EDA with SQL
-<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone/blob/main/4_EDA%20with%20SQL.ipynb" target="_blank">4_EDA with SQL.ipynb</a>
+<a href="https://github.com/ZhengEnThan/IBM-Applied-Data-Science-Capstone-Project/blob/main/4_EDA%20with%20SQL.ipynb" target="_blank">4_EDA with SQL.ipynb</a>
 
 Framework: IBM DB2
 Libraries or modules used: ibm_db
@@ -80,3 +80,7 @@ The data is queried using SQL to answer several questions about the data such as
 - The names of the unique launch sites in the space mission
 - The total payload mass carried by boosters launched by NASA (CRS)
 - The average payload mass carried by booster version F9 v1.1
+
+The SQL statements or functions used include SELECT, DISTINCT, AS, FROM, WHERE, LIMIT, LIKE, SUM(), AVG(), MIN(), BETWEEN, COUNT(), and YEAR().
+
+##
