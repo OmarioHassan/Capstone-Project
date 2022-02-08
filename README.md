@@ -132,7 +132,7 @@ Using a pie chart and a scatterplot, the interactive site shows:
 - The total success launches from each launch site
 - The correlation between payload mass and mission outcome (success or failure) for each launch site
 
-The application is launched on a terminal on the IBM Cognitive Class website.
+The application is launched on a terminal on the IBM Skills Network website.
 
 <br>
 The picture below shows a pie chart when launch site CCAFS LC-40 is chosen in the dropdown menu on the website. 0 represents failed launches while 1 represents successful launches. We can see that 73.1% of launches done at CCAFS LC-40 are failed launches.
